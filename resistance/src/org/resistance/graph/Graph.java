@@ -12,6 +12,7 @@ import java.util.Set;
  */
 public class Graph {
 	HashMap<String, Set<String>> adjacency = new HashMap<String, Set<String>>();
+	ArrayList<String> edgelist = new ArrayList<>();
 
 	public String findNode(String name) {
 		if (!adjacency.containsKey(name)) {
@@ -27,9 +28,12 @@ public class Graph {
 			adjacency.put(source, adj);
 		}
 		adj.add(target);
+
+
 	}
 
 	public void addUndirectedEdge(String source, String target) {
+		edgelist.add(source+" "+target);
 		addEdge(source, target);
 		addEdge(target, source);
 	}

@@ -16,13 +16,15 @@ import Jama.Matrix;
  * 
  * Parallel resistance computation
  * 
- * @author qn
+ *
  */
 public class ParResistanceCompMain {
 	public static void main(String[] args) {
 		for (String input : new String[] {
-				"/home/qn/RES_samplingSpectral/cycle/res/original/CyclesWithBlobsN255M5011_332.edges" 
-				}) {
+				"/Users/carolchen/Desktop/test1edge.txt"
+				//"/Users/carolchen/Desktop/Summer Research/BC-Tree-based-Sampling-with-Spectral-Sparfification/realworld_data/facebook/facebook_combined.txt"
+
+		}) {
 			try {
 				GraphReader reader = new GraphReader();
 				Graph g = reader.readEdges(input);

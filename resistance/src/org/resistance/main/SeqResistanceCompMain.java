@@ -12,12 +12,12 @@ import Jama.Matrix;
 
 /**
  * Sequential version
- * @author qn
+ *
  */
 public class SeqResistanceCompMain {
 	public static void main(String[] args) {
 		for (String input : new String[] {
-				 "/home/qn/RES_samplingSpectral/can_144.gv"
+				 "/home/jche6589/PycharmProjects/BC-Tree-based-Sampling-with-Spectral-Sparfification/realworld_data/can_144.gv"
 		}) {
 			try {
 				GraphReader reader = new GraphReader();
@@ -32,9 +32,12 @@ public class SeqResistanceCompMain {
 				long startTime = System.currentTimeMillis();
 
 				Resistance resis = new Resistance();
+
 				resis.computeResistance(L, B);
 
+
 				long endTime = System.currentTimeMillis();
+
 
 				System.out.println("resis vector = " + Arrays.toString(resis.getResistanceArray().toArray()));
 
